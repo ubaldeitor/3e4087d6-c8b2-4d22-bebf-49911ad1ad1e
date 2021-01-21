@@ -34,7 +34,8 @@ export class CatalogComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-   
+   this.currentIndex = 0;
+   this.catalogSelected = this.catalogs[this.currentIndex];
   }
 
   selectedCatalog(index: number) {

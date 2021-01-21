@@ -2,7 +2,7 @@
     <div class="catalog-view">
         <div class="text-center">
             <div class="view-outter text-center">
-                <app-catalog-view></app-catalog-view>
+                <app-catalog-view [catalog]="this.catalogSelected"></app-catalog-view>
             </div>
         </div>
     </div>
@@ -13,7 +13,7 @@
         <div class="next" >
             <img src="../../../assets/icons/right_icon.png">
         </div>
-        <app-catalog-items ></app-catalog-items>
+        <app-catalog-items [items] = "this.catalogs" [currentIndex]="this.currentIndex"></app-catalog-items>
     </div>
     
      <div class="slide-input">
