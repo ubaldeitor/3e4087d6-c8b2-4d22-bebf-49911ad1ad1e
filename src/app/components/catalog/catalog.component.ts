@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-catalog',
@@ -39,15 +39,18 @@ export class CatalogComponent implements OnInit {
   }
 
   selectedCatalog(index: number) {
-    
+    this.catalogSelected = this.catalogs[index];
   }
 
   previousClick() {
-    
+    this.currentIndex = this.currentIndex > 0 ? this.currentIndex - 1 : this.catalogs.length - 1;
+    console.log(this.currentIndex);
+    this.selectedCatalog(this.currentIndex);
   }
 
   nextClick() {
-    
+    this.currentIndex = this.currentIndex < this.catalogs.length ? this.currentIndex + 1 : 0;
+    this.selectedCatalog(this.currentIndex);
   }
 
   slideChange(checked) {

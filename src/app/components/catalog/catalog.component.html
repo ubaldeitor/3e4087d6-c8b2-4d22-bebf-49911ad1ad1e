@@ -8,10 +8,10 @@
     </div>
     <div class="catalog-items">
         <div class="previous" >
-            <img src="../../../assets/icons/left-icon.png">
+            <img src="../../../assets/icons/left-icon.png" (click)="previousClick()">
         </div>
         <div class="next" >
-            <img src="../../../assets/icons/right_icon.png">
+            <img src="../../../assets/icons/right_icon.png" (click)="nextClick()">
         </div>
         <app-catalog-items [items] = "this.catalogs" [currentIndex]="this.currentIndex"></app-catalog-items>
     </div>
