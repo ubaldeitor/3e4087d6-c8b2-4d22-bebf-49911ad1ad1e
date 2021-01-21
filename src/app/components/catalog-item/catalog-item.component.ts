@@ -12,7 +12,6 @@ export class CatalogItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(JSON.stringify(this.catalog));
   }
 
 

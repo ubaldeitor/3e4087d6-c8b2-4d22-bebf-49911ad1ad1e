@@ -13,10 +13,10 @@
         <div class="next" >
             <img src="../../../assets/icons/right_icon.png" (click)="nextClick()">
         </div>
-        <app-catalog-items [items] = "this.catalogs" [currentIndex]="this.currentIndex"></app-catalog-items>
+        <app-catalog-items [items] = "this.catalogs" [currentIndex]="this.currentIndex" (selectedCatalog)="selectedCatalog($event)"></app-catalog-items>
     </div>
     
      <div class="slide-input">
-        <input type="checkbox"  class="test" id="slide"> Slide
+        <input type="checkbox"  class="test" id="slide" (change)="slideChange($event.target.checked)" > Slide
     </div>
 </div>
